@@ -1,0 +1,12 @@
+from sqlmodel import SQLModel
+
+from app.core.engine import engine
+from app.models import Item
+
+# make sure all SQLModel models are imported (app.models) before initializing DB
+# otherwise, SQLModel might fail to initialize relationships properly
+# for more details: https://github.com/fastapi/full-stack-fastapi-template/issues/28
+
+
+def init_db() -> None:
+    SQLModel.metadata.create_all(engine)
