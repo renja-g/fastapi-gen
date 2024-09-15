@@ -45,7 +45,11 @@ PROJECT_STRUCTURE = {
 }
 
 def render_template(template_name: str, context: dict) -> str:
-    env = Environment(loader=FileSystemLoader("templates"))
+    env = Environment(
+        loader=FileSystemLoader("templates"),
+        trim_blocks=True,
+        lstrip_blocks=True,
+    )
     template = env.get_template(template_name)
     return template.render(context)
 
