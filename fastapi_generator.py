@@ -18,21 +18,21 @@ FEATURES = {
 
 PROJECT_STRUCTURE = {
     "app": {
-        "__init__.py": "init.py.j2",
+        "__init__.py": "__init__.py.j2",
         "main.py": "app/main.py.j2",
         "models.py": "app/models.py.j2",
         "crud.py": "app/crud.py.j2",
         "api": {
-            "__init__.py": "init.py.j2",
+            "__init__.py": "__init__.py.j2",
             "main.py": "app/api/main.py.j2",
             "deps.py": "app/api/deps.py.j2",
             "routes": {
-                "__init__.py": "init.py.j2",
+                "__init__.py": "__init__.py.j2",
                 "items.py": "app/api/routes/items.py.j2",
             },
         },  
         "core": {
-            "__init__.py": "init.py.j2",
+            "__init__.py": "__init__.py.j2",
             "config.py": "app/core/config.py.j2",
             "db.py": "app/core/db.py.j2",
             "engine.py": "app/core/engine.py.j2",
