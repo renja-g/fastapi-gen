@@ -3,4 +3,10 @@ sqlmodel==0.0.22
 pydantic-settings==2.5.2
 psycopg==3.2.1
 psycopg-binary==3.2.1
-{% if "fastapi-cli" in features %}fastapi-cli==0.0.5{% endif %}
+{% if "fastapi-cli" in features %}
+fastapi-cli==0.0.5
+{% endif %}
+{% if "auth" in features %}
+pyjwt==2.9.0
+passlib==1.7.4
+{% endif %}

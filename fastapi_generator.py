@@ -14,6 +14,7 @@ console = Console()
 FEATURES = {
     "docker": "Include Dockerfile and docker-compose.yml",
     "fastapi-cli": "Include FastAPI CLI",
+    "auth": "Include authentication and authorization",
 }
 
 PROJECT_STRUCTURE = {
@@ -36,6 +37,7 @@ PROJECT_STRUCTURE = {
             "config.py": "app/core/config.py.j2",
             "db.py": "app/core/db.py.j2",
             "engine.py": "app/core/engine.py.j2",
+            "security.py": ("app/core/security.py.j2", ["auth"]),
         },
     },
     "requirements.txt": "requirements.txt.j2",
